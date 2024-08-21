@@ -7,7 +7,14 @@ body {
 * {
   box-sizing: border-box;
 }
-
+#heading {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
 .container {
   width: 100%;
   display: grid;

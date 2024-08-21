@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Pill Cards</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script>
+      // Define redirection URLs for each ID
+      const redirectUrls = {
+          youtube: 'https://www.youtube.com/yourchannel', // Replace with your YouTube URL
+          linkedin: 'https://www.linkedin.com/in/yourprofile', // Replace with your LinkedIn URL
+          facebook: 'https://www.facebook.com/yourpage', // Replace with your Facebook URL
+          instagram: 'https://www.instagram.com/yourprofile', // Replace with your Instagram URL
+          twitter: 'https://twitter.com/yourprofile', // Replace with your Twitter URL
+          website: 'https://www.yourwebsite.com', // Replace with your website URL
+          whatsapp: 'https://wa.me/yourphonenumber' // Replace with your WhatsApp number
+      };
+  
+      // Function to handle click events and redirect
+      function handleRedirect(event) {
+          const id = event.currentTarget.id;
+          const url = redirectUrls[id];
+          if (url) {
+              window.location.href = url;
+          } else {
+              console.error(`No URL found for ID: ${id}`);
+          }
+      }
+  
+      // Ensure DOM is fully loaded before attaching event listeners
+      document.addEventListener('DOMContentLoaded', function() {
+          // Attach event listeners to each block
+          const ids = ['youtube', 'linkedin', 'facebook', 'instagram', 'twitter', 'website', 'whatsapp'];
+          ids.forEach(id => {
+              const element = document.getElementById(id);
+              if (element) {
+                  element.addEventListener('click', handleRedirect);
+              } else {
+                  console.error(`Element with ID ${id} not found.`);
+              }
+          });
+      });
+  </script>
+  
+  </head>
+  <body>
+    <!-- partial:index.partial.html 
+ <div class='card-right'>
+    <div class='card-image'>
+      <img src='https://images.pexels.com/photos/701855/pexels-photo-701855.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260'>
+    </div>
+    <div class='card-text'>
+      <p>Donec lacus nunc, viverra nec, blandit vel, egestas et, augue.</p>
+    </div>
+  </div>
+
+
+   <div class='card-top'>
+    <div class='card-image'>
+      <img src='https://images.pexels.com/photos/668295/pexels-photo-668295.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260'>
+    </div>
+    <div class='card-text'>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </div>
+
+   <div class="card-left">
+        <div class="card-image">
+          <img
+            src="https://cdn.pixabay.com/photo/2018/11/13/22/01/instagram-3814080_1280.png?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+          />
+        </div>
+        <div class="card-text">
+          <p>Follow us on instagram</p>
+        </div>
+      </div>
+-->
+      <div id="heading">
+        <h1>B2 AD Solutions</h1> 
+      </div>
+      
+    <div class="container">
+      <div class="card-bottom" id="youtube">
+        <div class="card-image">
+          <img src="img/youtube.png" />
+        </div>
+        <div class="card-text">
+          <p>Follow us on Youtube</p>
+        </div>
+      </div>
+
+      <div class="card-right" id="linkedin">
+        <div class="card-image">
+          <img src="img/linkedin.jpg" />
+        </div>
+        <div class="card-text">
+          <p>Follow us on Linkdin</p>
+        </div>
+      </div>
+      <div class="card-top" id="facebook">
+        <div class="card-image">
+          <img src="img/facebook.avif" />
+        </div>
+        <div class="card-text">
+          <p>Follow us on Facebook</p>
+        </div>
+      </div>
+
+      <div class="card-left" id="instagram">
+        <div class="card-image">
+          <img
+            src="https://img.freepik.com/free-psd/instagram-application-logo_23-2151544100.jpg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260"
+          />
+        </div>
+        <div class="card-text">
+          <p>Follow us on Instagram</p>
+        </div>
+      </div>
+
+      <div class="card-top" id="twitter">
+        <div class="card-image">
+          <img src="img/twitter.webp" />
+        </div>
+        <div class="card-text">
+          <p>Follow us on twitter-X</p>
+        </div>
+      </div>
+      <div class="card-right" id="website">
+        <div class="card-image">
+          <img src="img/b2logo2.png" />
+        </div>
+        <div class="card-text">
+          <p>Visit our website</p>
+        </div>
+      </div>
+
+      <div class="card-top" id="whatsapp">
+        <div class="card-image">
+          <img src="img/whatsapp.avif" />
+        </div>
+        <div class="card-text">
+          <p>Get in touch with Whatsapp</p>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="redirects-pillcards.js"></script>
+  </body>
+</html>

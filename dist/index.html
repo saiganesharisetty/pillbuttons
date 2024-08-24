@@ -2,46 +2,60 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>CodePen - Pill Cards</title>
+    <title>B2 Ad Solutions Link PillCards</title>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="img/b2logo2.png" type="image/x-icon" />
     <script>
       // Define redirection URLs for each ID
       const redirectUrls = {
-          youtube: 'https://www.youtube.com/yourchannel', // Replace with your YouTube URL
-          linkedin: 'https://www.linkedin.com/in/yourprofile', // Replace with your LinkedIn URL
-          facebook: 'https://www.facebook.com/yourpage', // Replace with your Facebook URL
-          instagram: 'https://www.instagram.com/yourprofile', // Replace with your Instagram URL
-          twitter: 'https://twitter.com/yourprofile', // Replace with your Twitter URL
-          website: 'https://www.yourwebsite.com', // Replace with your website URL
-          whatsapp: 'https://wa.me/yourphonenumber' // Replace with your WhatsApp number
+        youtube: "https://www.youtube.com/b2adsolutions", // Replace with your YouTube URL
+        linkedin: "https://in.linkedin.com/in/b2-ad-solutions-16688431b", // Replace with your LinkedIn URL
+        facebook: "https://www.facebook.com/b2adsolutions", // Replace with your Facebook URL
+        instagram: "https://www.instagram.com/b2adsolutions/", // Replace with your Instagram URL
+        twitter: "https://x.com/b2adsolutions", // Replace with your Twitter URL
+        website: "http://www.b2adsolutions.com/", // Replace with your website URL
+        whatsapp: "https://wa.me/+919948491221", // Replace with your WhatsApp number
+        gmaps: "https://maps.app.goo.gl/3R7CVrdiqBxov9RP9",
+        call: "tel:7894688135",
+        gmail: "mailto:b2adsolutions@gmail.com",
       };
-  
+
       // Function to handle click events and redirect
       function handleRedirect(event) {
-          const id = event.currentTarget.id;
-          const url = redirectUrls[id];
-          if (url) {
-              window.location.href = url;
-          } else {
-              console.error(`No URL found for ID: ${id}`);
-          }
+        const id = event.currentTarget.id;
+        const url = redirectUrls[id];
+        if (url) {
+          window.location.href = url;
+        } else {
+          console.error(`No URL found for ID: ${id}`);
+        }
       }
-  
+
       // Ensure DOM is fully loaded before attaching event listeners
-      document.addEventListener('DOMContentLoaded', function() {
-          // Attach event listeners to each block
-          const ids = ['youtube', 'linkedin', 'facebook', 'instagram', 'twitter', 'website', 'whatsapp'];
-          ids.forEach(id => {
-              const element = document.getElementById(id);
-              if (element) {
-                  element.addEventListener('click', handleRedirect);
-              } else {
-                  console.error(`Element with ID ${id} not found.`);
-              }
-          });
+      document.addEventListener("DOMContentLoaded", function () {
+        // Attach event listeners to each block
+        const ids = [
+          "youtube",
+          "linkedin",
+          "facebook",
+          "instagram",
+          "twitter",
+          "website",
+          "whatsapp",
+          "gmaps",
+          "call",
+          "gmail",
+        ];
+        ids.forEach((id) => {
+          const element = document.getElementById(id);
+          if (element) {
+            element.addEventListener("click", handleRedirect);
+          } else {
+            console.error(`Element with ID ${id} not found.`);
+          }
+        });
       });
-  </script>
-  
+    </script>
   </head>
   <body>
     <!-- partial:index.partial.html 
@@ -75,10 +89,14 @@
         </div>
       </div>
 -->
-      <div id="heading">
-        <h1>B2 AD Solutions</h1> 
+    <div id="heading">
+      <div class="card-top">
+        <div id="heading">
+          <h1>B2 AD Solutions</h1>
+        </div>
       </div>
-      
+    </div>
+    <div id="navspace"></div>
     <div class="container">
       <div class="card-bottom" id="youtube">
         <div class="card-image">
@@ -91,10 +109,46 @@
 
       <div class="card-right" id="linkedin">
         <div class="card-image">
-          <img src="img/linkedin.jpg" />
+          <img src="img/linkedin-icon.png" />
         </div>
         <div class="card-text">
           <p>Follow us on Linkdin</p>
+        </div>
+      </div>
+
+      <div class="card-bottom" id="gmaps">
+        <div class="card-image">
+          <img src="img/gmaps.webp" />
+        </div>
+        <div class="card-text">
+          <p>Connect us on Gmail</p>
+        </div>
+      </div>
+
+      <div class="card-right" id="call">
+        <div class="card-image">
+          <img src="img/call.jpg" />
+        </div>
+        <div class="card-text">
+          <p>Connect us on call</p>
+        </div>
+      </div>
+
+      <div class="card-top" id="discord">
+        <div class="card-image">
+          <img src="img/discord.jpeg" />
+        </div>
+        <div class="card-text">
+          <p>Connect us on Discord</p>
+        </div>
+      </div>
+
+      <div class="card-bottom" id="gmail">
+        <div class="card-image">
+          <img src="img/gmail.webp" />
+        </div>
+        <div class="card-text">
+          <p>Connect us on Gmail</p>
         </div>
       </div>
       <div class="card-top" id="facebook">
@@ -134,7 +188,7 @@
         </div>
       </div>
 
-      <div class="card-top" id="whatsapp">
+      <div class="card-right" id="whatsapp">
         <div class="card-image">
           <img src="img/whatsapp.avif" />
         </div>

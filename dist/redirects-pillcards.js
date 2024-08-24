@@ -1,3 +1,5 @@
+document.body.style.zoom = "80%";
+
 // Define redirection URLs for each ID
 const redirectUrls = {
   youtube: "https://www.youtube.com/yourchannel", // Replace with your YouTube URL

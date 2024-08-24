@@ -3,6 +3,15 @@ body {
   font-family: "Trebuchet MS", sans-serif;
   font-size: 15.5px;
 }
+body {
+  transform: scale(0.9);
+  transform-origin: top left;
+  width: 111.11%; /* Adjust width to prevent layout shifts */
+}
+.card-imagehead {
+  border-top-left-radius: 0%;
+  border-top-right-radius: 0%;
+}
 
 * {
   box-sizing: border-box;
@@ -14,6 +23,10 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   align-items: center;
+  width: 97%;
+}
+#navspace {
+  height: 8vh;
 }
 .container {
   width: 100%;
@@ -140,6 +153,7 @@ body {
 .card-text {
   align-self: center;
   padding: 23px;
+  text-align: center;
 }
 
 .card-top .card-text {
@@ -170,6 +184,7 @@ body {
   margin: 0;
   line-height: 1.35em;
   color: #334455;
+  font-size: x-large;
 }
 
 @media (max-width: 500px) {

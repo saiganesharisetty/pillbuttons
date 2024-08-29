@@ -8,16 +8,18 @@
     <script>
       // Define redirection URLs for each ID
       const redirectUrls = {
-        youtube: "https://www.youtube.com/b2adsolutions", // Replace with your YouTube URL
+        youtube: "https://www.youtube.com/channel/UCMGkl5vFKtcj-pm0DKWbO8A", // Replace with your YouTube URL
         linkedin: "https://in.linkedin.com/in/b2-ad-solutions-16688431b", // Replace with your LinkedIn URL
         facebook: "https://www.facebook.com/b2adsolutions", // Replace with your Facebook URL
         instagram: "https://www.instagram.com/b2adsolutions/", // Replace with your Instagram URL
         twitter: "https://x.com/b2adsolutions", // Replace with your Twitter URL
         website: "http://www.b2adsolutions.com/", // Replace with your website URL
-        whatsapp: "https://wa.me/+919948491221", // Replace with your WhatsApp number
+        whatsapp: "https://wa.me/+919966771260", // Replace with your WhatsApp number
         gmaps: "https://maps.app.goo.gl/3R7CVrdiqBxov9RP9",
-        call: "tel:7894688135",
+        call: "tel:+919966771260",
         gmail: "mailto:b2adsolutions@gmail.com",
+        discord: "https://discord.gg/nRZHF6vJ",
+        pinterest: "https://in.pinterest.com/b2adsolutions/",
       };
 
       // Function to handle click events and redirect
@@ -45,6 +47,8 @@
           "gmaps",
           "call",
           "gmail",
+          "discord",
+          "pinterest",
         ];
         ids.forEach((id) => {
           const element = document.getElementById(id);
@@ -92,7 +96,7 @@
     <div id="heading">
       <div class="card-top">
         <div id="heading">
-          <h1>B2 AD Solutions</h1>
+          <h1>Connect with B2 AD Solutions</h1>
         </div>
       </div>
     </div>
@@ -115,13 +119,20 @@
           <p>Follow us on Linkdin</p>
         </div>
       </div>
-
+      <div class="card-top" id="pinterest">
+        <div class="card-image">
+          <img src="img/pinterest.png" />
+        </div>
+        <div class="card-text">
+          <p>Follow us on Pinterest</p>
+        </div>
+      </div>
       <div class="card-bottom" id="gmaps">
         <div class="card-image">
           <img src="img/gmaps.webp" />
         </div>
         <div class="card-text">
-          <p>Connect us on Gmail</p>
+          <p>Reach us with Google maps</p>
         </div>
       </div>
 
